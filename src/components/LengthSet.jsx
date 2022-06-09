@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux";
-import { setLength } from '../redux/slices/generateSlice';
+import { setLength } from "../redux/slices/generateSlice";
 
 function LengthSet() {
   const dispatch = useDispatch();
@@ -15,12 +15,13 @@ function LengthSet() {
           </div>
           <div className="length__slider">
             <span className="length__number min">4</span>
-            <input 
-            type="range" 
-            min={4} max={30} 
-            step="any"
-            value={length} 
-            onChange={(e) => dispatch(setLength({value: ~~e.target.value}))} />
+            <input
+              type="range"
+              min={4}
+              max={30}
+              value={length}
+              onChange={(e) => dispatch(setLength({ value: e.target.value }))}
+            />
             <span className="length__number max">30</span>
           </div>
         </div>

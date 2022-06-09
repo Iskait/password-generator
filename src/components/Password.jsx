@@ -1,15 +1,16 @@
 import { useSelector, useDispatch } from "react-redux";
 import { toggleCopied } from "../redux/slices/copySlice";
+import classNames from "classnames";
 
 function Password() {
   const dispatch = useDispatch();
   const pass = useSelector((state) => state.generate.pass);
   const { showButtons, copied } = useSelector((state) => state.copy);
 
-  const handleCopy = () => { 
+  const handleCopy = () => {
     dispatch(toggleCopied({ visible: true }));
     navigator.clipboard.writeText(pass);
-  }
+  };
 
   return (
     <div className="password">
@@ -17,17 +18,21 @@ function Password() {
         <div className="password__row">
           <div className="password__field">
             <div className="password__generate">{pass}</div>
-            {showButtons &&
-              (copied ? (
-                <button className="password__btn copied">copied</button>
-              ) : (
-                <button
-                  onClick={handleCopy}
-                  className="password__btn copy"
-                >
-                  click to copy
-                </button>
-              ))}
+            <button
+              className={classNames("password__btn copied", {
+                active: showButtons && copied,
+              })}
+            >
+              copied
+            </button>
+            <button
+              onClick={handleCopy}
+              className={classNames("password__btn copy", {
+                active: showButtons && !copied,
+              })}
+            >
+              click to copy
+            </button>
           </div>
         </div>
       </div>
