@@ -1,0 +1,57 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:regular,800&display=swap);
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+}
+button {
+	outline: 0;
+    background-color: transparent;
+}
+html, body, #root {
+    min-height: 100%;
+    font-family: "Montserrat";
+    color: #fff;
+    font-size: 18px;
+    background-image: linear-gradient(to top, #209cff 100%, #68e0cf 200%);
+    width: 100%;
+}
+.wrapper {
+    max-width: 400px;
+    height: 600px;
+    background: #0a0e31;
+	border-radius: 10px;
+    margin: 40px auto;
+    padding: 10px 25px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    @media(max-width: 410px) {
+        margin: 40px 10px;
+    }
+}
+
+._container {
+    margin: 0 auto;
+}
+.page {
+    flex: 1 1 auto;
+}
+.field-title {
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 800;
+    font-size: 14px;
+    margin-right: 10px;
+}
+@import url(./header.scss);
+@import url(./password.scss);
+@import url(./length.scss);
+@import url(./settings.scss);
+@import url(./generate.scss);
