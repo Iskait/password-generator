@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/Iskait/password-generator/static/css/main.7372fe20.css",
-    "main.js": "/Iskait/password-generator/static/js/main.025dea05.js",
-    "index.html": "/Iskait/password-generator/index.html",
-    "main.7372fe20.css.map": "/Iskait/password-generator/static/css/main.7372fe20.css.map",
-    "main.025dea05.js.map": "/Iskait/password-generator/static/js/main.025dea05.js.map"
+    "main.css": "/password-generator/static/css/main.7372fe20.css",
+    "main.js": "/password-generator/static/js/main.025dea05.js",
+    "index.html": "/password-generator/index.html",
+    "main.7372fe20.css.map": "/password-generator/static/css/main.7372fe20.css.map",
+    "main.025dea05.js.map": "/password-generator/static/js/main.025dea05.js.map"
   },
   "entrypoints": [
     "static/css/main.7372fe20.css",
